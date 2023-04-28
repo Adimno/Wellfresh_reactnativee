@@ -1,7 +1,7 @@
-import React, { useState } from 'react'
-import { Text, View, StyleSheet } from "react-native"
-import TextBox from "../components/TextBox"
-import Btn from "../components/Btn"
+import React, { useState } from 'react';
+import {TouchableOpacity, Text, View, StyleSheet } from "react-native";
+import TextBox from "../components/TextBox";
+import Btn from "../components/Btn";
 import firebase from 'firebase/app';
 import "firebase/auth";
 
@@ -48,8 +48,14 @@ export default function Loginscreen({ navigation }) {
         <TextBox placeholder="Email Address" onChangeText={text => handleChange(text, "email")} />
         <TextBox placeholder="Password" onChangeText={text => handleChange(text, "pwd")} secureTextEntry={true} />
         <View style={{ flexDirection: "row", justifyContent: "space-between", alignItems: "center", width: "92%", }}>
-            <Btn onClick={() => Login()} title="Login" style={{ width: "48%" }} />
-            <Btn onClick={() => navigation.navigate("Sign Up")} title="Sign Up" style={{ width: "48%", backgroundColor: "#344869" }} />
+            <TouchableOpacity onPress={() => Login()} style={{ width: "48%" }}>
+                <Text >Login</Text>
+            </TouchableOpacity>
+            <TouchableOpacity onPress={() => navigation.navigate("Sign Up")} style={{ width: "48%" }}>
+                <Text >Sign Up</Text>
+            </TouchableOpacity>
+            {/* <Btn onClick={() => Login()} title="Login" style={{ width: "48%" }} />
+            <Btn onClick={() => navigation.navigate("Sign Up")} title="Sign Up" style={{ width: "48%", backgroundColor: "#344869" }} /> */}
         </View>
     </View>
 }
