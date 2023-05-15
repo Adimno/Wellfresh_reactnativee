@@ -14,13 +14,7 @@ function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false)
 
   const firebaseConfig = {
-    apiKey: "AIzaSyAYm9LfK5vbmzNV0ymQ_FgKsGMhDtH5Z_o",
-    authDomain: "wellfresh-f971a.firebaseapp.com",
-    projectId: "wellfresh-f971a",
-    storageBucket: "wellfresh-f971a.appspot.com",
-    messagingSenderId: "183131066828",
-    appId: "1:183131066828:web:375a565b4b0f9312ca0d69",
-    measurementId: "G-MC4R4GPMYT"
+   
   };
 
   //Checking if firebase has been initialized
